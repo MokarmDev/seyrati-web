@@ -1,0 +1,11 @@
+{
+    "id": "friendsofbotble/fob-seo-meta-keywords",
+    "name": "FOB SEO Meta Keywords",
+    "namespace": "FriendsOfBotble\\SeoMetaKeywords\\",
+    "provider": "FriendsOfBotble\\SeoMetaKeywords\\Providers\\SeoMetaKeywordsServiceProvider",
+    "author": "Friends of Botble",
+    "url": "https://friendsofbotble.com",
+    "version": "1.0.1",
+    "description": "Add meta keywords field to SEO helper for better search engine optimization.",
+    "minimum_core_version": "7.6.0"
+}

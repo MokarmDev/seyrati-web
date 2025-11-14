@@ -1,0 +1,11 @@
+{
+    "id": "botble/botble-sitemap",
+    "name": "Botble Sitemap",
+    "namespace": "Botble\\BotbleSitemap\\",
+    "provider": "Botble\\BotbleSitemap\\Providers\\SitemapServiceProvider",
+    "author": "Ms Teknoloji",
+    "url": "https://ms.net.tr",
+    "version": "1.0.0",
+    "description": "Generate and manage XML sitemaps for your website with support for static pages, dynamic content, multi-language and images",
+    "minimum_core_version": "7.3.0"
+}

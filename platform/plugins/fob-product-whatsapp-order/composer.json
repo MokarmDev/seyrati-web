@@ -1,0 +1,16 @@
+{
+    "name": "friendsofbotble/fob-product-whatsapp-order",
+    "description": "Add WhatsApp order functionality to products",
+    "type": "botble-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Friends Of Botble",
+            "email": "contact@friendsofbotble.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0"
+    }
+}
