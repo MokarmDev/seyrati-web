@@ -12,6 +12,7 @@ use Botble\Base\Forms\Fields\PasswordField;
 use Botble\Base\Forms\Fields\PhoneNumberField;
 use Botble\Ecommerce\Facades\EcommerceHelper;
 use Botble\Ecommerce\Forms\Fronts\Auth\FieldOptions\EmailFieldOption;
+use Botble\Ecommerce\Forms\Fronts\Auth\FieldOptions\PhoneNumberFieldOption;
 use Botble\Ecommerce\Forms\Fronts\Auth\FieldOptions\TextFieldOption;
 use Botble\Ecommerce\Http\Requests\LoginRequest;
 use Botble\Ecommerce\Models\Customer;
@@ -44,12 +45,13 @@ class LoginForm extends AuthForm
                 $form->add(
                     'email',
                     PhoneNumberField::class,
-                    TextFieldOption::make()
+                    PhoneNumberFieldOption::make()
                         ->label(__('Phone'))
                         ->placeholder(__('Phone number'))
                         ->icon('ti ti-phone')
                         ->addAttribute('autocomplete', 'tel')
                         ->value($rememberedEmail)
+                        ->withCountryCodeSelection()
                 );
             })
             ->when(EcommerceHelper::getLoginOption() === 'email', function (LoginForm $form) use ($rememberedEmail): void {
