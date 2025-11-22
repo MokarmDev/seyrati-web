@@ -65,6 +65,8 @@ class Product extends BaseModel
         'sale_type',
         'price',
         'sale_price',
+        'original_base_price',
+        'original_base_sale_price',
         'start_date',
         'end_date',
         'length',

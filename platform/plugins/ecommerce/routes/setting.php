@@ -31,6 +31,18 @@ AdminHelper::registerRoutes(function (): void {
                     'permission' => 'ecommerce.settings.currencies',
                 ]);
 
+                Route::post('currencies/apply-commission', [
+                    'as' => 'ecommerce.settings.currencies.apply-commission',
+                    'uses' => 'CurrencySettingController@applyCommission',
+                    'permission' => 'ecommerce.settings.currencies',
+                ]);
+
+                Route::post('currencies/reset-prices', [
+                    'as' => 'ecommerce.settings.currencies.reset-prices',
+                    'uses' => 'CurrencySettingController@resetPrices',
+                    'permission' => 'ecommerce.settings.currencies',
+                ]);
+
                 Route::get('store-locators', [
                     'as' => 'ecommerce.settings.store-locators',
                     'uses' => 'StoreLocatorSettingController@index',

@@ -21,6 +21,18 @@ class StoreCurrenciesService
             $item['symbol'] = mb_substr($item['symbol'], 0, 10);
             $item['decimals'] = $item['decimals'] < 10 && $item['decimals'] >= 0 ? $item['decimals'] : 2;
 
+
+            // Handle commission settings
+            if (isset($item['commission_percentage'])) {
+                $item['commission_percentage'] = max(0, min(100, floatval($item['commission_percentage'])));
+            }
+            
+            if (isset($item['apply_commission_globally'])) {
+                $item['apply_commission_globally'] = (bool) $item['apply_commission_globally'];
+            }
+
+
+
             if (count($currencies) == 1) {
                 $item['is_default'] = 1;
             }
