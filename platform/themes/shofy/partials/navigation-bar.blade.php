@@ -15,7 +15,7 @@
                 @if (is_plugin_active('ecommerce'))
                     <div class="col">
                         <div class="text-center tp-mobile-item">
-                            <a href="{{ route('public.products') }}" class="tp-mobile-item-btn">
+                            <a href="/" class="tp-mobile-item-btn">
                                 <x-core::icon name="ti ti-shopping-bag" />
                                 <span class="text-truncate" title="{{ __('Store') }}">{{ __('Store') }}</span>
                             </a>
